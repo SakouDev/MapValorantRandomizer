@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: lightblue;
+  background-image: url('./image/cloud.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.ImageMap{
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.CardMap{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% ;
+}
+
+.buttonMap {
+  /* position: absolute;
+  top: 70%;
+  left: 45%; */
+  width: 10%;
+  border-radius: 20px;
+  padding: 2%;
+  border: none;
+  margin: 0 auto;
+}
+
+.buttonMap:active {
+  background-color: #9098E8;
+}
+
