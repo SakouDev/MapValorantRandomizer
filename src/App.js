@@ -11,11 +11,12 @@ import Lotus from './image/Lotus.webp'
 import Pearl from './image/Pearl.webp'
 import Split from './image/Split.webp'
 import Sunset from './image/Sunset.webp'
+import MapHome from './image/MapHome.png'
 
 import { useEffect, useState } from 'react';
 
 function App() {
-  
+
   const mapsValorantData = [
     {
       name: 'Ascent',
@@ -58,11 +59,20 @@ function App() {
       image: Sunset
     },
   ]
-  const [result, setResult] = useState(mapsValorantData[0])
+  const [result, setResult] = useState({
+    name: 'Which map ?',
+    image: MapHome
+  },)
 
 
   const RandomPick = () => {
-    setResult(mapsValorantData[Math.floor(Math.random() * mapsValorantData.length)])
+    let generatedRandom = mapsValorantData[Math.floor(Math.random() * mapsValorantData.length)]
+
+    if (generatedRandom.name != result.name) {
+      setResult(generatedRandom)
+    } else {
+      RandomPick()
+    }
   }
 
   return (
